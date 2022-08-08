@@ -1,10 +1,18 @@
 import React from "react";
+import StudentCard from "./StudentCard";
 
- function Main(){
+const student ={
+    name: "Khali Gopaul",
+    age: 37,
+    id: 'r63j42',
+    term: 'Su22'
+}
 
-    return(
+ function Main({name}){
+     return(
         <main>
-            <h1>Howdy</h1>
+            <h1>Howdy {name || 'Guest'}</h1>
+           {name &&<StudentCard student={student}/>}
         </main>
     )
 }
